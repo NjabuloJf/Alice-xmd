@@ -1,7 +1,7 @@
 {
-  "name": "popkid",
+  "name": "Alice-xmd",
   "version": "1.0.0",
-  "description": "WhatsApp Bot with Multi-Number Support by Dml",
+  "description": "WhatsApp Bot with Multi-Number Support by Njabulo",
   "main": "lib/connection.js",
   "type": "commonjs",
   "scripts": {
