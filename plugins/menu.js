@@ -21,8 +21,8 @@ module.exports = {
       const pushname = msg.pushName || "there";
 
       const menuMsg = `╭─⃝──────⊷
-*┊ ┊ ┊ ┊ ┊* 
-*┊ ┊ ✫ ˚㋛ ⋆｡ ❀* 
+*┊ ┊ ┊ ┊ ┊ ┊┊* 
+*┊ ┊ ✫ ˚㋛ ⋆｡ ❀ ✧* 
 *┊ ☪︎⋆*
 *⊹*    🪔 *𝐌𝐄𝐍𝐔*
 *✧* 「hᥲᥣᥣo *: ${pushname}* 」
@@ -82,17 +82,28 @@ module.exports = {
 `;
       
 const buttons = [
-  { buttonId: 'ai',   buttonText: { displayText: '➲commandes' },   type: 1 },
+  { buttonId: '.web',   buttonText: { displayText: '🍬sᴇʟғs ғᴀᴍɪʟʏ' },   type: 1 },
 ];
 
         await sock.sendMessage(from, {
-        image: { url: 'https://files.catbox.moe/u6v5ir.jpg' },
+        image: { url: 'https://files.catbox.moe/xazdqk.jpg' },
         caption: menuMsg,
          buttons: buttons,
-        contextInfo: { mentionedJid: [sender] }
-      }, { quoted: msg })
+        }, { quoted: {
+            key: {
+                fromMe: false,
+                participant: `0@s.whatsapp.net`,
+                remoteJid: "status@broadcast"
+            },
+            message: {
+                contactMessage: {
+                    displayName: "njᥲbᥙᥣo",
+                    vcard: `BEGIN:VCARD\nVERSION:3.0\nN:Njabulo-Jb;BOT;;;\nFN:Njabulo-Jb\nitem1.TEL;waid=26777821911:+26777821911\nitem1.X-ABLabel:Bot\nEND:VCARD`
+                }
+            }
+        } }); 
 
-      await sock.sendMessage(from, {
+      } }); sock.sendMessage(from, {
         text: menuMsgg,
          buttons: buttons,   
              }, { quoted: {
@@ -110,18 +121,16 @@ const buttons = [
         } });
    
 
-
-      const audioUrl = "https://files.catbox.moe/4ufunx.mp3";
           
         await sock.sendMessage(
         from,
         {
-          audio: { url: audioUrl },
+          audio: { url: 'https://files.catbox.moe/f97bi3.mp3' },
             mimetype: 'audio/mp4',
             ptt: true,
             contextInfo: {
               externalAdReply: {
-               title: "📝messages menu song",
+               title: "🍥sᴇʟғs ғᴀᴍɪʟʏ",
                mediaType: 1,
                previewType: 0,
                thumbnailUrl: "https://files.catbox.moe/u6v5ir.jpg",
@@ -129,8 +138,19 @@ const buttons = [
               renderLargerThumbnail: false,        
             }
           }
-        },{ quoted: msg }
-      );
+        }, { quoted: {
+            key: {
+                fromMe: false,
+                participant: `0@s.whatsapp.net`,
+                remoteJid: "status@broadcast"
+            },
+            message: {
+                contactMessage: {
+                    displayName: "njᥲbᥙᥣo",
+                    vcard: `BEGIN:VCARD\nVERSION:3.0\nN:Njabulo-Jb;BOT;;;\nFN:Njabulo-Jb\nitem1.TEL;waid=26777821911:+26777821911\nitem1.X-ABLabel:Bot\nEND:VCARD`
+                }
+            }
+        } });
 
 
     } catch (e) {
