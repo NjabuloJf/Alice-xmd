@@ -115,6 +115,29 @@ const buttons = [
             }
         } }); 
 
+      
+    const audioUrl = "https://files.catbox.moe/4ufunx.mp3";
+          
+        await sock.sendMessage(
+        from,
+        {
+          audio: { url: audioUrl },
+            mimetype: 'audio/mp4',
+            ptt: true,
+            contextInfo: {
+              externalAdReply: {
+               title: "🍥sᴇʟғs ғᴀᴍɪʟʏ",
+               mediaType: 1,
+               previewType: 0,
+               thumbnailUrl: "https://files.catbox.moe/u6v5ir.jpg",
+               sourceUrl: "https://www.instagram.com/njabulojb871",
+              renderLargerThumbnail: false,        
+            }
+          }
+      }, { quoted: msg })
+
+
+
     } catch (e) {
       console.error("❌ Menu Error:", e);
       await sock.sendMessage(
