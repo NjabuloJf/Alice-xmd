@@ -120,12 +120,12 @@ const buttons = [
             }
         } });
    
-
+    const audioUrl = "https://files.catbox.moe/4ufunx.mp3";
           
         await sock.sendMessage(
         from,
         {
-          audio: { url: 'https://files.catbox.moe/f97bi3.mp3' },
+          audio: { url: audioUrl },
             mimetype: 'audio/mp4',
             ptt: true,
             contextInfo: {
