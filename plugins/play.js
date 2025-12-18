@@ -61,12 +61,12 @@ Example:
       if (buffer) {
         await socket.sendMessage(sender, {
           image: buffer, 
-          caption
+          caption,
+            buttons: buttons, 
         }, { quoted: msg });
       } else {
         await socket.sendMessage(sender, {
           text: caption, 
-        buttons: buttons,
         }, { quoted: msg });
       }
 
