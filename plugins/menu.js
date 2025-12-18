@@ -83,52 +83,33 @@ module.exports = {
 ✨ DML-MIN-BOT ✨
 `;
 
-        const buttons = [{
-    name: "cta_url",
-    buttonParamsJson: JSON.stringify({
-      display_text: "Visit Website",
-      id: `backup channel`,
-      url: "https://whatsapp.com/channel/0029VbAckOZ7tkj92um4KN3u" 
-    })
-  },{
-    name: "cta_copy",
-    buttonParamsJson: JSON.stringify({
-      display_text: "Messaging online",
-      id: `copy`,
-      copy_code: "greeting"
-    })
-    }];
+        await sock.sendMessage(from, {
+        image: { url: 'https://files.catbox.moe/reypkp.jpg' },
+        caption: menuMsg,
+        contextInfo: { mentionedJid: [sender] }
+      }, { quoted: msg })
 
-
-      await sock.sendMessage(
-        from,
-        {
-          interactiveMessage: {
-          image: { url: 'https://files.catbox.moe/reypkp.jpg' },
-          header: menuMsg,
-            buttons: buttons,
-            headerType: 1,
-          contextInfo: {
-            mentionedJid: [sender],
-            forwardingScore: 999,
-            isForwarded: true,
-            forwardedNewsletterMessageInfo: {
-              newsletterJid: '120363403958418756@newsletter',
-              newsletterName: 'DML-MENU',
-              serverMessageId: 143
-            }
+      // List‑style button (OWNER INFO)
+      await sock.sendMessage(from, {
+        title: "ᴏᴡɴᴇʀꜱ ɪɴꜰᴏ",
+        text: "ᴄɪᴄᴋ ᴛʜᴇ ᴏᴡᴇʀꜱ ɪɴꜰᴏ ʙᴜᴛᴛᴏɴ🖲📋",
+        footer: "DML-MIN BOT",
+        buttonText: "OWNER INFO",
+        sections: [
+          {
+            title: "CORE SYSTEM",
+            rows: [
+              { title: "ɴᴀᴍᴇ", description: "Njabulo Jb lite", rowId: ".owner" },
+              { title: "list", description: "commandes", rowId: ".menu" },
+              { title: "ping", description: "pong", rowId: ".ping" }
+            ]
           }
-        },
-        { quoted: msg }
-      );
+        ]
+      }, { quoted: msg })
 
     } catch (e) {
-      console.error("❌ Menu Error:", e);
-      await sock.sendMessage(
-        msg.key.remoteJid,
-        { text: `❌ ERROR: ${e.message}` },
-        { quoted: msg }
-      );
+      console.error('❌ Menu Error:', e)
+      await sock.sendMessage(from, { text: `❌ ERROR: ${e.message}` }, { quoted: msg })
     }
   }
-};
+  }
