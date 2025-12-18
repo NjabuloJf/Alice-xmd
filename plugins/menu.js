@@ -44,7 +44,7 @@ module.exports = {
 
 
         await sock.sendMessage(from, {
-        image: { url: 'https://files.catbox.moe/reypkp.jpg' },
+        image: { url: 'https://files.catbox.moe/u6v5ir.jpg' },
         caption: menuMsg,
         contextInfo: { mentionedJid: [sender] }
       }, { quoted: msg })
@@ -63,7 +63,7 @@ module.exports = {
                title: "📝messages menu song",
                mediaType: 1,
                previewType: 0,
-               thumbnailUrl: "https://files.catbox.moe/reypkp.jpg",
+               thumbnailUrl: "https://files.catbox.moe/u6v5ir.jpg",
                sourceUrl: "https://www.instagram.com/njabulojb871",
               renderLargerThumbnail: false,        
             }
