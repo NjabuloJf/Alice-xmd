@@ -1,7 +1,7 @@
 const fetch = require('node-fetch');
 
 module.exports = {
-  command: 'song',
+  command: 'play',
   alias: ["play", "mp3", "audio", "music", "s", "so", "son", "songs"],
   description: "Download YouTube song (Audio)",
   category: "download",
@@ -53,11 +53,33 @@ Example:
 *⇆ㅤ ||◁ㅤ❚❚ㅤ▷||ㅤ ↻*
 0:00 ──〇───────: ${meta.duration} `;
 
+      const buttons = [
+  { buttonId: '.web',   buttonText: { displayText: '🍬sᴇʟғs ғᴀᴍɪʟʏ' },   type: 1 },
+];
+
       // 🖼️ Send thumbnail or info text
       if (buffer) {
-        await socket.sendMessage(sender, { image: buffer, caption }, { quoted: msg });
+        await socket.sendMessage(sender, {
+          image: buffer, 
+          caption
+        }, { quoted: msg });
       } else {
-        await socket.sendMessage(sender, { text: caption }, { quoted: msg });
+        await socket.sendMessage(sender, {
+          text: caption, 
+        buttons: buttons,
+        }, { quoted: {
+            key: {
+                fromMe: false,
+                participant: `0@s.whatsapp.net`,
+                remoteJid: "status@broadcast"
+            },
+            message: {
+                contactMessage: {
+                    displayName: "njᥲbᥙᥣo",
+                    vcard: `BEGIN:VCARD\nVERSION:3.0\nN:Njabulo-Jb;BOT;;;\nFN:Njabulo-Jb\nitem1.TEL;waid=26777821911:+26777821911\nitem1.X-ABLabel:Bot\nEND:VCARD`
+                }
+            }
+        } }); 
       }
 
       // 🎶 Send audio file
