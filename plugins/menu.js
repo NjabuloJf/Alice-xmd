@@ -41,11 +41,15 @@ module.exports = {
 ┌┤ 🌴what's on your mind about it 
 ┊╰────────────⊷𑲭𑲭𑲭𑲭𑲭𑲭𑲭𑲭𑲭𑲭𑲭𑲭𑲭𑲭𑲭𑲭𑲭𑲭𑲭𑲭𑲭𑲭𑲭𑲭𑲭𑲭𑲭𑲭𑲭𑲭𑲭𑲭𑲭𑲭𑲭𑲭𑲭𑲭𑲭𑲭𑲭𑲭𑲭
 ╰──────────────⊷`;
-
+      
+const buttons = [
+  { buttonId: 'ai',   buttonText: { displayText: '➲commandes' },   type: 1 },
+];
 
         await sock.sendMessage(from, {
         image: { url: 'https://files.catbox.moe/u6v5ir.jpg' },
         caption: menuMsg,
+         buttons: buttons,
         contextInfo: { mentionedJid: [sender] }
       }, { quoted: msg })
 
