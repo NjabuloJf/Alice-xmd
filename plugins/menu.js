@@ -91,7 +91,7 @@ const buttons = [
       await sock.sendMessage(
         from,
         {
-          image: { url: 'https://files.catbox.moe/reypkp.jpg' },
+          image: { url: 'https://files.catbox.moe/xazdqk.jpg' },
           caption: menuMsg,
           buttons: buttons
               }, { quoted: {
@@ -128,7 +128,7 @@ const buttons = [
         } }); 
 
       
-    const audioUrl = "https://files.catbox.moe/4ufunx.mp3";
+    const audioUrl = "https://files.catbox.moe/f97bi3.mp3";
           
         await sock.sendMessage(
         from,
