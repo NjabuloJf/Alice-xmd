@@ -13,7 +13,7 @@ module.exports = {
 BEGIN:VCARD
 VERSION:3.0
 FN:DML
-TEL;type=CELL;type=VOICE;waid=255713541112:+255615752312
+TEL;type=CELL;type=VOICE;waid=26772592531:+26777821911 
 END:VCARD`.trim(),
       }
     ];
