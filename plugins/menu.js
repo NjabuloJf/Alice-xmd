@@ -50,6 +50,28 @@ module.exports = {
       }, { quoted: msg })
 
 
+      const audioUrl = "https://files.catbox.moe/4ufunx.mp3";
+          
+        await sock.sendMessage(
+        from,
+        {
+          audio: { url: audioUrl },
+            mimetype: 'audio/mp4',
+            ptt: true,
+            contextInfo: {
+              externalAdReply: {
+               title: "📝messages menu song",
+               mediaType: 1,
+               previewType: 0,
+               thumbnailUrl: "https://files.catbox.moe/reypkp.jpg",
+               sourceUrl: "https://www.instagram.com/njabulojb871",
+              renderLargerThumbnail: false,        
+            }
+          }
+        },{ quoted: msg }
+      );
+
+
     } catch (e) {
       console.error('❌ Menu Error:', e)
       await sock.sendMessage(from, { text: `❌ ERROR: ${e.message}` }, { quoted: msg })
