@@ -33,15 +33,60 @@ module.exports = {
 ╰───────────────⭓
 `;
 
+      
+    const buttons = [{
+    name: "cta_url",
+    buttonParamsJson: JSON.stringify({
+      display_text: "Visit Website",
+      id: `backup channel`,
+      url: "https://whatsapp.com/channel/0029VbAckOZ7tkj92um4KN3u" 
+    })
+  },{
+    name: "cta_copy",
+    buttonParamsJson: JSON.stringify({
+      display_text: "Messaging online",
+      id: `copy`,
+      copy_code: caption
+    })
+    }];
+
       await sock.sendMessage(
         jid,
         {
-          image: { url: 'https://files.catbox.moe/reypkp.jpg' },
-          caption: caption,
-          mentions: [sender]
-        },
-        { quoted: msg }
-      );
+        interactiveMessage: {
+      image: { url: 'https://files.catbox.moe/xazdqk.jpg' },
+      header: caption,
+      buttons: buttons,
+      headerType: 1,
+      contextInfo: {
+        externalAdReply: {
+          title: "📝messages menu cmd",
+          mediaType: 1,
+          previewType: 0,
+          thumbnailUrl: "https://files.catbox.moe/xazdqk.jpg",
+          sourceUrl: "https://www.instagram.com/njabulojb871", // added URL
+          renderLargerThumbnail: false,
+        }
+      }
+    }
+  }, {
+    quoted: {
+      key: {
+        fromMe: false,
+        participant: "0@s.whatsapp.net",
+        remoteJid: "status@broadcast"
+      },
+      message: {
+        contactMessage: {
+          displayName: "🟢online njᥲbᥙᥣo🍥",
+          vcard: `BEGIN:VCARD\nVERSION:3.0\nN:Njabulo-Jb;BOT;;;\nFN:Njabulo-Jb\nitem1.TEL;waid=26777821911:+26777821911\nitem1.X-ABLabel:Bot\nEND:VCARD`
+        }
+      }
+    }
+  });
+
+          
+          
 
     } catch (err) {
       console.error("❌ Error in alive command:", err);
