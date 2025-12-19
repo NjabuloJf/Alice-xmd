@@ -47,6 +47,10 @@ module.exports = {
 ┊ *ᴡʜᴀᴛsᴀᴘᴘ ʙᴏᴛ ғʀᴇᴇ ғᴀᴍɪʟʏ*
 ╰┬──────────⊷⳹`;
 
+        const buttons = [
+  { buttonId: '.web',   buttonText: { displayText: '🍬sᴇʟғs ғᴀᴍɪʟʏ' },   type: 1 },
+];
+
         // 3. Final reply with latency result, quoted to the original message
         await sock.sendMessage(from,{
         image: { url: 'https://files.catbox.moe/xazdqk.jpg' },
