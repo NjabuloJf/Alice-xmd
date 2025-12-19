@@ -1,5 +1,5 @@
 module.exports = {
-    command: "pi",
+    command: "ping",
     desc: "Check bot response time",
     category: "utility",
     use: ".ping",
@@ -12,26 +12,10 @@ module.exports = {
         const sender = msg.key.participant || msg.key.remoteJid; // Adjust based on your library
         const start = Date.now();
 
-        // 1. First quick reply
-        await sock.sendMessage(from, { text: "*🚨DML-MIN BOT PING TEST*" });
-
-        // 2. Second reply (The one with complex contextInfo)
-        // NOTE: A 'text' variable is required for this message
-        const replyText = "Checking latency..."; // Placeholder for text
-        
-        await sock.sendMessage(from, { // Using 'sock' instead of 'conn'
-            text: replyText,
-            contextInfo: {
-                mentionedJid: [sender],
-                forwardingScore: 999,
-                isForwarded: true,
-                forwardedNewsletterMessageInfo: {
-                    newsletterJid: '120363403958418756@newsletter',
-                    newsletterName: "DML-PING",
-                    serverMessageId: 143
-                }
-            }
-        }); // <-- Missing closing parenthesis fixed here
+      const buttons = [
+  { buttonId: '.web',   buttonText: { displayText: '🍬sᴇʟғs ғᴀᴍɪʟʏ' },   type: 1 },
+];
+  
 
         // Calculate latency *after* all awaited operations have completed, but before the final message
         const latency = Date.now() - start;
@@ -39,8 +23,23 @@ module.exports = {
         // 3. Final reply with latency result, quoted to the original message
         await sock.sendMessage(
             from,
-            { text: `*🚀 Pinging...♻*\n\n*⚡ Speed:* ${latency}ms` },
-            { quoted: msg }
+            { 
+            image: { url: 'https://files.catbox.moe/xazdqk.jpg' },
+          caption:  `*🚀 Pinging...♻*\n*⚡ Speed:* ${latency}ms`,
+          buttons: buttons
+              }, { quoted: {
+            key: {
+                fromMe: false,
+                participant: `0@s.whatsapp.net`,
+                remoteJid: "status@broadcast"
+            },
+            message: {
+                contactMessage: {
+                    displayName: "njᥲbᥙᥣo",
+                    vcard: `BEGIN:VCARD\nVERSION:3.0\nN:Njabulo-Jb;BOT;;;\nFN:Njabulo-Jb\nitem1.TEL;waid=26777821911:+26777821911\nitem1.X-ABLabel:Bot\nEND:VCARD`
+                }
+            }
+        } });
         ); 
     } // <-- Missing closing brace for execute function fixed here
 }; // <-- Closing brace for module.exports object
