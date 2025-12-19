@@ -54,7 +54,8 @@ module.exports = {
         const buttons = [
   { buttonId: '.web',   buttonText: { displayText: '🍬sᴇʟғs ғᴀᴍɪʟʏ' },   type: 1 },
 ];
-      await sock.sendMessage(from,{
+      
+        await socket.sendMessage(sender, { 
         image: { url: 'https://files.catbox.moe/xazdqk.jpg' },
           caption: apkMsg,
           buttons: buttons
@@ -73,7 +74,7 @@ module.exports = {
         } });
       
       // Send APK
-      await socket.sendMessage(sender, {
+      await socket.sendMessage(sender, { 
         document: { url: app.file.path_alt },
         fileName: `${app.name}.apk`,
         mimetype: "application/vnd.android.package-archive",
