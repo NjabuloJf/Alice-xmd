@@ -24,29 +24,15 @@ module.exports = {
     }).join("\n");
 
     const caption = `
-╔════════════════════╗
-     📢  DML-MINBOT GROUP TAGGER
-╚════════════════════╝
-
 🏷️ Group      : ${groupName}
 👑 Admins     : ${adminCount}
 👤 User       : ${user}
 👥 Members    : ${memberCount}
 
-══════════════════════
-📨 Message:
-══════════════════════
-
 ${mentionsText}
+`;
 
-══════════════════════
-⚡ Powered by Dml`;
 
-    await sock.sendMessage(msg.key.remoteJid, {
-      image: { url: "https://files.catbox.moe/reypkp.jpg" },
-      caption: caption,
-      mentions: participants
-    }, { quoted: msg });
   }
 };
         
