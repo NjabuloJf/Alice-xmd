@@ -31,7 +31,7 @@ module.exports = {
         }         
             
 
-        const weMsg =`╭─⃝──────⊷
+        const caption =`╭─⃝──────⊷
 *┊ ┊ ┊ ┊ ┊ ┊┊* 
 *┊ ┊ ✫ ˚㋛ ⋆｡ ❀ ✧* 
 *┊ ☪︎⋆*
@@ -54,8 +54,8 @@ module.exports = {
 
 
             await socket.sendMessage(sender, {  
-            image: { url: weatherImgUrl },  
-          caption: wegMsg,
+            image: { url: weatherImgUrl },
+            caption,  
           buttons: buttons
               }, { quoted: {
             key: {
