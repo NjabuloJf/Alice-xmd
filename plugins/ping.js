@@ -10,6 +10,7 @@ module.exports = {
         // Define common variables from the message object
         const from = msg.key.remoteJid;
         const sender = msg.key.participant || msg.key.remoteJid; // Adjust based on your library
+       const pushname = msg.pushName || "there";
         const start = Date.now();
 
        const replyText = "*system loading...*"; // Placeholder for text
@@ -39,7 +40,7 @@ module.exports = {
 *┊ ┊ ✫ ˚㋛ ⋆｡ ❀ ✧* 
 *┊ ☪︎⋆*
 *⊹*    🪔 *𝐌𝐄𝐍𝐔*
-*✧* 「hᥲᥣᥣo *: Njabulo Jb* 」
+*✧* 「hᥲᥣᥣo *: ${pushname}* 」
 
 *┊* ✧ _*ping test time*_
 ┊ ──¬¬¬¬¦
