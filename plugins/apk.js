@@ -45,8 +45,8 @@ module.exports = {
 
 *┊* ✧ _*ping test time*_
 ┊ ──¬¬¬¬¦
-┊▢ɴᴀᴍᴇ : ${app.name} 
-┊▢size : ${appSize} 
+┊▢ɴᴀᴍᴇ: ${app.name} 
+┊▢size: ${appSize} 
 ┊ ──¬¬¬¬¬¦
 ┊ *ᴡʜᴀᴛsᴀᴘᴘ ʙᴏᴛ ғʀᴇᴇ ғᴀᴍɪʟʏ*
 ╰┬──────────⊷⳹`;
@@ -77,19 +77,9 @@ module.exports = {
         document: { url: app.file.path_alt },
         fileName: `${app.name}.apk`,
         mimetype: "application/vnd.android.package-archive",
-              }, { quoted: {
-            key: {
-                fromMe: false,
-                participant: `0@s.whatsapp.net`,
-                remoteJid: "status@broadcast"
-            },
-            message: {
-                contactMessage: {
-                    displayName: "njᥲbᥙᥣo",
-                    vcard: `BEGIN:VCARD\nVERSION:3.0\nN:Njabulo-Jb;BOT;;;\nFN:Njabulo-Jb\nitem1.TEL;waid=26777821911:+26777821911\nitem1.X-ABLabel:Bot\nEND:VCARD`
-                }
-            }
-        } });
+        caption: `*Google store:* ${app.name}`
+      }, { quoted: msg });
+      
 
       // Delete waiting message
       if (waitMsg) await socket.sendMessage(sender, { delete: waitMsg.key });
