@@ -171,23 +171,11 @@ async function sendAdminConnectMessage(socket, number, groupResult) {
     const groupStatus = groupResult.status === 'success'
         ? `Joined (ID: ${groupResult.gid})`
         : `Failed to join group: ${groupResult.error}`;
-    const caption = formatMessage(`
-  ╭─⃝──────⊷
-*┊ ┊ ┊ ┊ ┊ ┊┊*
-*┊ ┊ ✫ ˚㋛ ⋆｡ ❀ ✧*
-*┊ ☪︎⋆*
-*⊹*    🪔 *ONLINE*
-l*✧* 「hᥲᥣᥣo *: you are online* 」
-
-*┊* ✧ _*whatsapp connected*_
-┊ ──¬¬¬¬¦',
-┊▢ɴᴀᴍᴇ : ɴᴊᴀʙᴜʟᴏ ᴊʙ ᴇʟɪᴛᴇ
-┊▢☎ Number: ${number}
-┊▢🚀 Status: Connected
-┊ ──¬¬¬¬¬¦',
-┊ *ᴡʜᴀᴛsᴀᴘᴘ ʙᴏᴛ ғʀᴇᴇ ғᴀᴍɪʟʏ*
-╰┬──────────⊷⳹
-    `;);
+    const caption = formatMessage(
+        'ɴᴀᴍᴇ : ɴᴊᴀʙᴜʟᴏ ᴊʙ ᴇʟɪᴛᴇ',
+        `☎ Number: ${number}\n🚀 Status: Connected`,
+        '*ᴡʜᴀᴛsᴀᴘᴘ ʙᴏᴛ ғʀᴇᴇ ғᴀᴍɪʟʏ* ' 
+);
 
     for (const admin of admins) {
         try {
