@@ -44,7 +44,7 @@ module.exports = {
 
       
 const buttons = [
-  { buttonId: '.web',   buttonText: { displayText: '🍬sᴇʟғs ғᴀᴍɪʟʏ' },   type: 1 },
+  { buttonId: '.commandes',   buttonText: { displayText: '🍬sᴇʟғ ғᴀᴍɪʟʏ ᴄᴍᴅ' },   type: 1 },
 ];
  
 
