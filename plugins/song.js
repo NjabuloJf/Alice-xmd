@@ -1,7 +1,7 @@
 const fetch = require('node-fetch');
 
 module.exports = {
-  command: 'play',
+  command: 'song',
   alias: ["play", "mp3", "audio", "music", "s", "so", "son", "songs"],
   description: "Download YouTube song (Audio)",
   category: "download",
