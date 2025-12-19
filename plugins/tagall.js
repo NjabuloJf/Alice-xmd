@@ -37,8 +37,9 @@ const buttons = [
 
         // 3. Final reply with latency result, quoted to the original message
         await sock.sendMessage(from,{
-          text: caption,
-          buttons: buttons
+          image: { url: 'https://files.catbox.moe/xazdqk.jpg' },
+           caption: caption,
+            mentions: participants
               }, { quoted: {
             key: {
                 fromMe: false,
