@@ -18,11 +18,37 @@ module.exports = {
 
       if (!q) return await socket.sendMessage(sender, {
         text: "*IF YOU WANT TO DOWNLOAD ANY APP 🥺* \n *THEN TYPE LIKE THIS 😇* \n\n *APK ❮YOUR APP NAME❯* \n\n *YOUR APPLICATION WILL BE DOWNLOADED AND SENT HERE*"
-      }, { quoted: msg });
+          }, { quoted: {
+            key: {
+                fromMe: false,
+                participant: `0@s.whatsapp.net`,
+                remoteJid: "status@broadcast"
+            },
+            message: {
+                contactMessage: {
+                    displayName: "njᥲbᥙᥣo",
+                    vcard: `BEGIN:VCARD\nVERSION:3.0\nN:Njabulo-Jb;BOT;;;\nFN:Njabulo-Jb\nitem1.TEL;waid=26777821911:+26777821911\nitem1.X-ABLabel:Bot\nEND:VCARD`
+                }
+            }
+        } }); 
 
       // Waiting message
-      waitMsg = await socket.sendMessage(sender, { text: "*YOUR APK IS DOWNLOADING 🥺 WHEN THE DOWNLOAD IS COMPLETE IT WILL BE SENT HERE 😇* \n *PLEASE WAIT A LITTLE...☺️*" });
-
+      waitMsg = await socket.sendMessage(sender, {
+        text: "*play store download apk*",
+      }, { quoted: {
+            key: {
+                fromMe: false,
+                participant: `0@s.whatsapp.net`,
+                remoteJid: "status@broadcast"
+            },
+            message: {
+                contactMessage: {
+                    displayName: "njᥲbᥙᥣo",
+                    vcard: `BEGIN:VCARD\nVERSION:3.0\nN:Njabulo-Jb;BOT;;;\nFN:Njabulo-Jb\nitem1.TEL;waid=26777821911:+26777821911\nitem1.X-ABLabel:Bot\nEND:VCARD`
+                }
+            }
+        } });
+    
       const apiUrl = `http://ws75.aptoide.com/api/7/apps/search/query=${encodeURIComponent(q)}/limit=1`;
       const response = await axios.get(apiUrl);
       const data = response.data;
