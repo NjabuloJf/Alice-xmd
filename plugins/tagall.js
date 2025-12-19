@@ -39,7 +39,8 @@ const buttons = [
           await sock.sendMessage(msg.key.remoteJid, {
           image: { url: 'https://files.catbox.moe/xazdqk.jpg' },
            caption: caption,
-            mentions: participants
+            mentions: participants,
+            buttons: buttons
               }, { quoted: {
             key: {
                 fromMe: false,
