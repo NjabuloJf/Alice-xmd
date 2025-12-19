@@ -6,9 +6,7 @@ module.exports = {
 
   execute: async (socket, msg, args) => {
       const from = msg.key.remoteJid;
-      const sender = msg.key.participant || msg.key.remoteJid; // Adjust based on your library
-      const pushname = msg.pushName || "there"
-
+      
     // 🕒 Calculate uptime
     const uptime = process.uptime(); // in seconds
     const hours = Math.floor(uptime / 3600);
@@ -21,8 +19,8 @@ module.exports = {
 *┊ ┊ ┊ ┊ ┊ ┊┊* 
 *┊ ┊ ✫ ˚㋛ ⋆｡ ❀ ✧* 
 *┊ ☪︎⋆*
-*⊹*    🪔 *𝐌𝐄𝐍𝐔*
-*✧* 「hᥲᥣᥣo *: ${pushname}* 」
+*⊹*    🪔 *UPTIME*
+*✧* 「hᥲᥣᥣo *: * 」
 
 *┊* ✧ _*ping test time*_
 ┊ ──¬¬¬¬¦
