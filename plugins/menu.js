@@ -42,46 +42,6 @@ module.exports = {
 ┊╰────────────⋆｡
 ╰──────────────⊷`;
 
-      const menuMsgg = `
-ᴅᴏᴡɴʟᴏᴀᴅ & ᴍᴇᴅɪᴀ 
-① ᴅʟ 
-② ᴀᴘᴋ 
-③ ғᴀᴄᴇʙᴏᴏᴋ 
-④ sᴏɴɢ 
-⑤ ᴠɪᴅᴇᴏ 
-⑥ ᴛɪᴋᴛᴏᴋ 
-⑥ ᴠᴠ 
-⑧ ᴄᴀᴛ 
-⑨ ɢᴇᴛᴘᴘ 
-⑩ ᴅᴘ 
-⑪ ᴡᴇᴀᴛʜᴇʀ 
-
-ᴀɪ & ɢᴇɴᴇʀᴀʟ 
-① ᴀɪsᴜᴍᴍᴀʀʏ 
-② ᴊᴏᴋᴇ 
-③ ᴡᴀʙᴇᴛᴀ 
-④ ᴀʟɪᴠᴇ 
-⑤ ᴜᴘᴛɪᴍᴇ 
-⑥ ᴘɪ 
-⑥ ᴍᴇɴᴜ 
-
-ɢʀᴏᴜᴘ ᴍᴀɴᴀɢᴇᴍᴇɴᴛ 
-① ᴘʀᴏᴍᴏᴛᴇ 
-② ᴅᴇᴍᴏᴛᴇ 
-③ ᴋɪᴄᴋᴀʟʟ 
-④ ᴛᴀɢᴀʟʟ 
-⑤ ʜɪᴅᴇᴛᴀɢ 
-⑥ ᴍᴜᴛᴇ 
-⑥ ᴜɴᴍᴜᴛᴇ 
-⑧ ᴅᴇʟᴇᴛᴇ 
-⑨ ᴊᴏɪɴ 
-
-ᴏᴡɴᴇʀ & ᴄᴏɴᴛʀᴏʟ 
-① ᴏᴡɴᴇʀ 
-② ʙʟᴏᴄᴋ 
-③ ᴜɴʙʟᴏᴄᴋ 
-④ ᴘᴀɪʀ
-`;
       
 const buttons = [
   { buttonId: '.web',   buttonText: { displayText: '🍬sᴇʟғs ғᴀᴍɪʟʏ' },   type: 1 },
@@ -108,24 +68,7 @@ const buttons = [
             }
         } });
 
-      await sock.sendMessage(
-        from,
-        {
-          text: menuMsgg,
-          buttons: buttons
-              }, { quoted: {
-            key: {
-                fromMe: false,
-                participant: `0@s.whatsapp.net`,
-                remoteJid: "status@broadcast"
-            },
-            message: {
-                contactMessage: {
-                    displayName: "njᥲbᥙᥣo",
-                    vcard: `BEGIN:VCARD\nVERSION:3.0\nN:Njabulo-Jb;BOT;;;\nFN:Njabulo-Jb\nitem1.TEL;waid=26777821911:+26777821911\nitem1.X-ABLabel:Bot\nEND:VCARD`
-                }
-            }
-        } }); 
+      
 
       
     const audioUrl = "https://files.catbox.moe/f97bi3.mp3";
@@ -134,7 +77,7 @@ const buttons = [
         from,
         {
           audio: { url: audioUrl },
-            mimetype: 'audio/mp4',
+            mimetype: 'audio/mp3',
             ptt: true,
             contextInfo: {
               externalAdReply: {
