@@ -31,10 +31,26 @@ module.exports = {
         // Calculate latency *after* all awaited operations have completed, but before the final message
         const latency = Date.now() - start;
 
+        const pingMsg =`╭─⃝──────⊷
+*┊ ┊ ┊ ┊ ┊ ┊┊* 
+*┊ ┊ ✫ ˚㋛ ⋆｡ ❀ ✧* 
+*┊ ☪︎⋆*
+*⊹*    🪔 *𝐌𝐄𝐍𝐔*
+*✧* 「hᥲᥣᥣo *: Njabulo Jb* 」
+
+*┊* ✧ _*ping test time*_
+┊ ──¬¬¬¬¦
+┊▢ɴᴀᴍᴇ : ɴᴊᴀʙᴜʟᴏ ᴊʙ ᴇʟɪᴛᴇ
+┊▢ᴘing : ${latency}ms
+┊▢ɴᴏᴅᴇ ᴠᴇʀsɪᴏɴ : ᴠ2.1.3
+┊ ──¬¬¬¬¬¦
+┊ *ᴡʜᴀᴛsᴀᴘᴘ ʙᴏᴛ ғʀᴇᴇ ғᴀᴍɪʟʏ*
+╰┬──────────⊷⳹`;
+
         // 3. Final reply with latency result, quoted to the original message
         await sock.sendMessage(from,{
         image: { url: 'https://files.catbox.moe/xazdqk.jpg' },
-          caption: menuMsg,
+          caption: pingMsg,
           buttons: buttons
               }, { quoted: {
             key: {
