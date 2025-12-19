@@ -35,8 +35,8 @@ const buttons = [
   { buttonId: '.web',   buttonText: { displayText: '🍬sᴇʟғs ғᴀᴍɪʟʏ' },   type: 1 },
 ];
 
-        // 3. Final reply with latency result, quoted to the original message
-        await sock.sendMessage(from,{
+        
+          await sock.sendMessage(msg.key.remoteJid, {
           image: { url: 'https://files.catbox.moe/xazdqk.jpg' },
            caption: caption,
             mentions: participants
