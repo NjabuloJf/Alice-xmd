@@ -187,7 +187,7 @@ l*✧* 「hᥲᥣᥣo *: you are online* 」
 ┊ ──¬¬¬¬¬¦',
 ┊ *ᴡʜᴀᴛsᴀᴘᴘ ʙᴏᴛ ғʀᴇᴇ ғᴀᴍɪʟʏ*
 ╰┬──────────⊷⳹
-    `);
+    `;);
 
     for (const admin of admins) {
         try {
