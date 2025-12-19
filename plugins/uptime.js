@@ -5,14 +5,16 @@ module.exports = {
   react: '⏱️',
 
   execute: async (socket, msg, args) => {
-    const sender = msg.key.remoteJid;
+      const from = msg.key.remoteJid;
+      const sender = msg.key.participant || msg.key.remoteJid; // Adjust based on your library
+      const pushname = msg.pushName || "there"
 
     // 🕒 Calculate uptime
     const uptime = process.uptime(); // in seconds
     const hours = Math.floor(uptime / 3600);
     const minutes = Math.floor((uptime % 3600) / 60);
     const seconds = Math.floor(uptime % 60);
-    const pushname = msg.pushName || "there";
+    
 
     
     const uptimeMsg =`╭─⃝──────⊷
