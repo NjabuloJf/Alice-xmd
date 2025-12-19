@@ -77,7 +77,7 @@ const buttons = [
         from,
         {
           audio: { url: audioUrl },
-            mimetype: 'audio/mp3',
+            mimetype: 'audio/mpeg',
             ptt: true,
             contextInfo: {
               externalAdReply: {
