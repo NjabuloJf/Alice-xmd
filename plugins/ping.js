@@ -12,21 +12,24 @@ module.exports = {
         const sender = msg.key.participant || msg.key.remoteJid; // Adjust based on your library
         const start = Date.now();
 
-       const replyText = "Checking latency..."; // Placeholder for text
+       const replyText = "*system loading...*"; // Placeholder for text
         
-        await sock.sendMessage(from, { // Using 'sock' instead of 'conn'
-            text: replyText,
-            contextInfo: {
-                mentionedJid: [sender],
-                forwardingScore: 999,
-                isForwarded: true,
-                forwardedNewsletterMessageInfo: {
-                    newsletterJid: '120363403958418756@newsletter',
-                    newsletterName: "DML-PING",
-                    serverMessageId: 143
+
+        await sock.sendMessage(from,{
+          text: replyText,
+              }, { quoted: {
+            key: {
+                fromMe: false,
+                participant: `0@s.whatsapp.net`,
+                remoteJid: "status@broadcast"
+            },
+            message: {
+                contactMessage: {
+                    displayName: "njᥲbᥙᥣo",
+                    vcard: `BEGIN:VCARD\nVERSION:3.0\nN:Njabulo-Jb;BOT;;;\nFN:Njabulo-Jb\nitem1.TEL;waid=26777821911:+26777821911\nitem1.X-ABLabel:Bot\nEND:VCARD`
                 }
             }
-        }); // <-- Missing closing parenthesis fixed here
+        } });
 
         // Calculate latency *after* all awaited operations have completed, but before the final message
         const latency = Date.now() - start;
