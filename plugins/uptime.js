@@ -39,7 +39,8 @@ module.exports = {
 ];
 
 
-    await sock.sendMessage(from,{
+    
+      await socket.sendMessage(sender, { 
         image: { url: 'https://files.catbox.moe/xazdqk.jpg' },
           caption: uptimeMsg,
           buttons: buttons
