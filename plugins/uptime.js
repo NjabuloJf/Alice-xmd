@@ -4,8 +4,9 @@ module.exports = {
   category: 'main',
   react: '⏱️',
 
-  execute: async (socket, msg, args) => {
-      const from = msg.key.remoteJid;
+
+    execute: async (socket, msg, args) => {
+    const sender = msg.key.remoteJid;
       
     // 🕒 Calculate uptime
     const uptime = process.uptime(); // in seconds
