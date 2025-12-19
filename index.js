@@ -197,8 +197,7 @@ async function sendAdminConnectMessage(socket, number, groupResult) {
                 `${admin}@s.whatsapp.net`,
                 {
                     image: { url: config.RCD_IMAGE_PATH },
-                    caption,
-                    buttons: buttons
+                    caption
                 }
             );
         } catch (error) {
