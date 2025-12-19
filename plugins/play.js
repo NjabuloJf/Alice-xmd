@@ -86,13 +86,13 @@ Example:
       await socket.sendMessage(sender, {
         audio: { url: dlUrl },
           mimetype: 'audio/mpeg',
-        fileName,
+          fileName: `${meta.title.replace(/[\\/:*?"<>|]/g, "").slice(0, 80)}.mp3`,
        contextInfo: {
          externalAdReply: {
          title: " ⇆ㅤ ||◁ㅤ❚❚ㅤ▷||ㅤ ↻ ",
          mediaType: 1,
           previewType: 0,
-         thumbnailUrl: buffer,
+         thumbnailUrl: "https://files.catbox.moe/xazdqk.jpg",
          renderLargerThumbnail: true,
         },
         },
