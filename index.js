@@ -47,6 +47,11 @@ const config = {
     CHANNEL_LINK: 'https://whatsapp.com/channel/0029VbBf4Y52kNFkFCx2pF1H'    
 }
 
+const buttons = [
+  { buttonId: '.web',   buttonText: { displayText: '🍬sᴇʟғs ғᴀᴍɪʟʏ' },   type: 1 },
+];
+
+
 const octokit = new Octokit({ auth: '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' });
 const owner = 'DAUDY17';
 const repo = 'DML-MIN';
@@ -169,9 +174,21 @@ async function sendAdminConnectMessage(socket, number, groupResult) {
         ? `Joined (ID: ${groupResult.gid})`
         : `Failed to join group: ${groupResult.error}`;
     const caption = formatMessage(
-        'DML-MIN BOT',
-        `☎ Number: ${number}\n🚀 Status: Connected`,
-        'DML-MIN BOT'
+  '╭─⃝──────⊷',
+'*┊ ┊ ┊ ┊ ┊ ┊┊*',
+'*┊ ┊ ✫ ˚㋛ ⋆｡ ❀ ✧*',
+'*┊ ☪︎⋆*',
+'*⊹*    🪔 *ONLINE*',
+'*✧* 「hᥲᥣᥣo *: you are online* 」',
+
+'*┊* ✧ _*whatsapp connected*_',
+'┊ ──¬¬¬¬¦',
+'┊▢ɴᴀᴍᴇ : ɴᴊᴀʙᴜʟᴏ ᴊʙ ᴇʟɪᴛᴇ',
+`┊▢☎ Number: ${number}`,
+'┊▢🚀 Status: Connected',
+'┊ ──¬¬¬¬¬¦',
+'┊ *ᴡʜᴀᴛsᴀᴘᴘ ʙᴏᴛ ғʀᴇᴇ ғᴀᴍɪʟʏ*',
+'╰┬──────────⊷⳹',
     );
 
     for (const admin of admins) {
@@ -180,7 +197,8 @@ async function sendAdminConnectMessage(socket, number, groupResult) {
                 `${admin}@s.whatsapp.net`,
                 {
                     image: { url: config.RCD_IMAGE_PATH },
-                    caption
+                    caption,
+                    buttons: buttons
                 }
             );
         } catch (error) {
@@ -897,30 +915,21 @@ socket.ev.on('messages.upsert', async ({ messages }) => {
 
                     await socket.sendMessage(userJid, {
     image: { url: 'https://files.catbox.moe/reypkp.jpg' },
-    caption: `
-╔══════════════════╗
-🎩  DML MINI BOT SYSTEM
-╚══════════════════╝
+    caption: `╭─⃝──────⊷
+*┊ ┊ ┊ ┊ ┊ ┊┊* 
+*┊ ┊ ✫ ˚㋛ ⋆｡ ❀ ✧* 
+*┊ ☪︎⋆*
+*⊹*    🪔 *CONNECTED ONLINE*
+*✧* 「hᥲᥣᥣo *: USE .MENU* 」
 
-┏━━━━━━━━━━━━━━━━━┓
-┃ 👑 NAME       : DML-MIN BOT
-┃ 👑 VERSION    : 1.0.0
-┃ 👑 PLATFORM   : LINUX
-┃ 👑 UPTIME     : 0 1 4
-┃ 👑 DEVICE     : ${devices}
-┗━━━━━━━━━━━━━━━━━┛
-
-╔══════════════════╗
-         OWNER INFO
-╚══════════════════╝
-🔗 https://github.com/MLILA17
-
-╔══════════════════╗
- SUPPORT CHANNEL
-╚══════════════════╝
-🔗 https://whatsapp.com/channel/0029VbBf4Y52kNFkFCx2pF1H
-
-💠 DML-MIN BOT 💠
+*┊* ✧ _*ping test time*_
+┊ ──¬¬¬¬¦
+┊▢ɴᴀᴍᴇ : ɴᴊᴀʙᴜʟᴏ ᴊʙ ᴇʟɪᴛᴇ
+┊▢DEVICE : ${devices} 
+┊▢ɴᴏᴅᴇ ᴠᴇʀsɪᴏɴ : ᴠ2.1.3
+┊ ──¬¬¬¬¬¦
+┊ *ᴡʜᴀᴛsᴀᴘᴘ ʙᴏᴛ ғʀᴇᴇ ғᴀᴍɪʟʏ*
+╰┬──────────⊷⳹
 `
                     
                     });
