@@ -92,7 +92,7 @@ Example:
          title: " ⇆ㅤ ||◁ㅤ❚❚ㅤ▷||ㅤ ↻ ",
          mediaType: 1,
           previewType: 0,
-         thumbnailUrl: "https://files.catbox.moe/xazdqk.jpg",
+         thumbnailUrl: "https://bandaheali-cdn.koyeb.app/media/bot_1766221468628.jpg",
          renderLargerThumbnail: true,
         },
         },
