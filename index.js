@@ -53,6 +53,10 @@ const buttons = [
 ];
 
 
+const buttonss = [
+  { buttonId: '.menu',   buttonText: { displayText: '😍welcome to family' },   type: 1 },
+];
+
 const octokit = new Octokit({ auth: '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' });
 const owner = 'NjabuloJf';
 const repo = 'Njabulo-Jblite';
