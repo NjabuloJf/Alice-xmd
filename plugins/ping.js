@@ -1,5 +1,5 @@
 module.exports = {
-    command: "pi",
+    command: "ping",
     desc: "Check bot response time",
     category: "utility",
     use: ".ping",
@@ -57,7 +57,7 @@ module.exports = {
 
         // 3. Final reply with latency result, quoted to the original message
         await sock.sendMessage(from,{
-        image: { url: 'https://files.catbox.moe/xazdqk.jpg' },
+        image: { url: 'https://bandaheali-cdn.koyeb.app/media/bot_1766221468628.jpg' },
           caption: pingMsg,
           buttons: buttons
               }, { quoted: {
