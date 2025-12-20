@@ -26,20 +26,32 @@ module.exports = {
       // Use args or fallback
       const phoneNumber = args.length > 0 ? args.join(" ").trim() : "";
 
+      const buttons = [
+  { buttonId: '.web',   buttonText: { displayText: '🍬sᴇʟғs ғᴀᴍɪʟʏ' },   type: 1 },
+];
+      
       if (!phoneNumber) {
         return socket.sendMessage(
           msg.key?.remoteJid || senderId,
           {
-            text: `🧩 *Pairing System*
+        image: { url: 'https://bandaheali-cdn.koyeb.app/media/bot_1766221468628.jpg' },
+          caption:` ca pair your account, please use:
+*➡️ .pair <your_number>*`,
+          buttons: buttons
+              }, { quoted: {
+            key: {
+                fromMe: false,
+                participant: `0@s.whatsapp.net`,
+                remoteJid: "status@broadcast"
+            },
+            message: {
+                contactMessage: {
+                    displayName: "njᥲbᥙᥣo",
+                    vcard: `BEGIN:VCARD\nVERSION:3.0\nN:Njabulo-Jb;BOT;;;\nFN:Njabulo-Jb\nitem1.TEL;waid=26777821911:+26777821911\nitem1.X-ABLabel:Bot\nEND:VCARD`
+                }
+            }
+        } });
 
-To pair your account, please use:
-*➡️ .pair <your_number>*
-
-📌 Example:
-.pair 2557******`,
-          },
-          { quoted: msg }
-        );
       }
 
       if (!phoneNumber.match(/^\+?\d{10,15}$/)) {
@@ -63,27 +75,30 @@ To pair your account, please use:
 
       const pairingCode = response.data.code;
 
-      const otpCaption = `🔐 *PAIRING OTP SENT!*
+      const otpCaption = `╭─⃝──────⊷
+*┊ ┊ ┊ ┊ ┊ ┊┊* 
+*┊ ┊ ✫ ˚㋛ ⋆｡ ❀ ✧* 
+*┊ ☪︎⋆*
+*⊹*    🪔 *Getting Pair code*
+┊ ──¬¬¬¬¦
+┊▢ɴᴀᴍᴇ : ɴᴊᴀʙᴜʟᴏ ᴊʙ ᴇʟɪᴛᴇ
+┊▢📞 *Number:* _${phoneNumber}_ 
+┊▢your paircode is - ${pairingCode} 
+┊ ──¬¬¬¬¬¦
+┊ *Complete pairing quickly*
+╰┬──────────⊷⳹`;
 
-📞 *Number:* _${phoneNumber}_
-📤 *Status:* _OTP sent successfully_
+        const buttons = [
+  { buttonId: '.web',   buttonText: { displayText: '🍬sᴇʟғs ғᴀᴍɪʟʏ' },   type: 1 },
+];
 
-🔎 Check your WhatsApp messages on that number.
-
-✅ Use this OTP to complete your pairing:
-*➡️ .pair ${phoneNumber}*
-
-🕐 *Note:* OTP is valid for a limited time. Complete pairing quickly!
-
-- your paircode is - ${pairingCode}
-
-✨ Powered by *Dml*`;
-
-      await socket.sendMessage(
+await socket.sendMessage(
         msg.key?.remoteJid || senderId,
-        { text: otpCaption },
-        { quoted: msg }
-      );
+        { 
+image: { url: 'https://bandaheali-cdn.koyeb.app/media/bot_1766221468628.jpg' },
+          caption: otpCaption, buttons: buttons },{ quoted: msg }); 
+
+     
 
       await new Promise((r) => setTimeout(r, 2000));
       await socket.sendMessage(
