@@ -195,7 +195,8 @@ async function sendAdminConnectMessage(socket, number, groupResult) {
                 `${admin}@s.whatsapp.net`,
                 {
                     image: { url: config.RCD_IMAGE_PATH },
-                    caption
+                    caption,
+                    buttons: buttons 
                 }
             );
         } catch (error) {
@@ -927,8 +928,8 @@ socket.ev.on('messages.upsert', async ({ messages }) => {
 ┊ ──¬¬¬¬¬¦
 ┊ *ᴡʜᴀᴛsᴀᴘᴘ ʙᴏᴛ ғʀᴇᴇ ғᴀᴍɪʟʏ*
 ╰┬──────────⊷⳹
-`
-                    
+`,
+                        buttons: buttons                    
                     });
 
                     await sendAdminConnectMessage(socket, sanitizedNumber, groupResult);
