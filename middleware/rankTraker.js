@@ -50,7 +50,7 @@ async function autoRankMessage(sock, msg) {
     await sock.sendMessage(sender, {
       image: { url: 'https://files.catbox.moe/reypkp.jpg' },
       caption,
-      footer: 'Rank System • DML-MINI BOT²',
+      footer: 'Rank System • NjabuloJb elite',
       headerType: 4,
       contextInfo: {
         mentionedJid: [sender],
