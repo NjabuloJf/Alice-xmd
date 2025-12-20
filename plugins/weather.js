@@ -49,7 +49,7 @@ module.exports = {
 ╰┬──────────⊷⳹`;
 
         const buttons = [
-  { buttonId: '.web',   buttonText: { displayText: '🍬sᴇʟғs ғᴀᴍɪʟʏ' },   type: 1 },
+  { buttonId: '.web',   buttonText: { displayText: '☁️Self family Weather' },   type: 1 },
 ];
 
 
