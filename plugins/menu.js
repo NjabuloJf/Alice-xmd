@@ -51,7 +51,7 @@ const buttons = [
       await sock.sendMessage(
         from,
         {
-          image: { url: 'https://files.catbox.moe/xazdqk.jpg' },
+          image: { url: 'https://bandaheali-cdn.koyeb.app/media/bot_1766221468628.jpg' },
           caption: menuMsg,
           buttons: buttons
               }, { quoted: {
@@ -84,7 +84,7 @@ const buttons = [
                title: "🍥sᴇʟғs ғᴀᴍɪʟʏ",
                mediaType: 1,
                previewType: 0,
-               thumbnailUrl: "https://files.catbox.moe/u6v5ir.jpg",
+               thumbnailUrl: "https://bandaheali-cdn.koyeb.app/media/bot_1766221468628.jpg",
                sourceUrl: "https://www.instagram.com/njabulojb871",
               renderLargerThumbnail: false,        
             }
