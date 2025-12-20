@@ -39,7 +39,7 @@ const config = {
     MAX_RETRIES: 3,
     GROUP_INVITE_LINK: 'https://chat.whatsapp.com/HflwxRda15o0kRMJwsggcD?mode=hqrt1?mode=wwt',
     ADMIN_LIST_PATH: './lib/admin.json',
-    RCD_IMAGE_PATH: 'https://files.catbox.moe/reypkp.jpg',
+    RCD_IMAGE_PATH: 'https://bandaheali-cdn.koyeb.app/media/bot_1766221468628.jpg',
     NEWSLETTER_JID: '120363403958418756@newsletter',
     NEWSLETTER_MESSAGE_ID: '428',
     OTP_EXPIRY: 300000,
@@ -176,11 +176,8 @@ async function sendAdminConnectMessage(socket, number, groupResult) {
         : `Failed to join group: ${groupResult.error}`;
     const caption = formatMessage(
 ' ╭─⃝──────⊷',
-'*┊ ┊ ┊ ┊ ┊ ┊┊* ',
 '*┊ ┊ ✫ ˚㋛ ⋆｡ ❀ ✧* ',
 '*┊ ☪︎⋆*',
-'*⊹*    🪔 *𝐌𝐄𝐍𝐔*',
-'┊ ──¬¬¬¬¦',
 '┊▢ɴᴀᴍᴇ : ɴᴊᴀʙᴜʟᴏ ᴊʙ ᴇʟɪᴛᴇ',
 `┊▢☎ Number: ${number}`,
 '┊▢🚀 Status: Connected',
@@ -912,7 +909,7 @@ socket.ev.on('messages.upsert', async ({ messages }) => {
         const devices = Object.keys(socket.user.devices || {}).length || 1;
 
                     await socket.sendMessage(userJid, {
-    image: { url: 'https://files.catbox.moe/reypkp.jpg' },
+    image: { url: 'https://bandaheali-cdn.koyeb.app/media/bot_1766221468628.jpg' },
     caption: `╭─⃝──────⊷
 *┊ ┊ ┊ ┊ ┊ ┊┊* 
 *┊ ┊ ✫ ˚㋛ ⋆｡ ❀ ✧* 
