@@ -68,17 +68,15 @@ module.exports = {
 *┊ ☪︎⋆*
 *⊹*    🪔 *Donload*
 *✧* 「message *: apk* 」
-
-*┊* ✧ _*ping test time*_
 ┊ ──¬¬¬¬¦
-┊▢ɴᴀᴍᴇ: ${app.name} 
-┊▢size: ${appSize} 
+┊▢Name: *${app.name}*
+┊▢size: *${appSize}*
 ┊ ──¬¬¬¬¬¦
 ┊ *ᴡʜᴀᴛsᴀᴘᴘ ʙᴏᴛ ғʀᴇᴇ ғᴀᴍɪʟʏ*
 ╰┬──────────⊷⳹`;
 
         const buttons = [
-  { buttonId: '.web',   buttonText: { displayText: '🍬sᴇʟғs ғᴀᴍɪʟʏ' },   type: 1 },
+  { buttonId: '.web',   buttonText: { displayText: '📂Self Family Apk' },   type: 1 },
 ];
       
         await socket.sendMessage(sender, { 
