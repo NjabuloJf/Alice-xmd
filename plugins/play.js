@@ -54,7 +54,8 @@ Example:
 *0:00 ──〇───────: ${meta.duration}* `;
 
       const buttons = [
-  { buttonId: '.web',   buttonText: { displayText: '🍬sᴇʟғs ғᴀᴍɪʟʏ' },   type: 1 },
+  { buttonId: '.web',   buttonText: { displayText: '🎧Get Audio' },   type: 1 },
+  { buttonId: '.web',   buttonText: { displayText: '🗃️Get Document' },   type: 1 }
 ];
 
       // 🖼️ Send thumbnail or info text
