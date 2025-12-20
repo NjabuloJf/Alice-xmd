@@ -46,13 +46,12 @@ module.exports = {
 ┊ ──¬¬¬¬¦
 ┊▢ɴᴀᴍᴇ : ɴᴊᴀʙᴜʟᴏ ᴊʙ ᴇʟɪᴛᴇ
 ┊▢ᴘing : ${latency}ms
-┊▢ɴᴏᴅᴇ ᴠᴇʀsɪᴏɴ : ᴠ2.1.3
 ┊ ──¬¬¬¬¬¦
 ┊ *ᴡʜᴀᴛsᴀᴘᴘ ʙᴏᴛ ғʀᴇᴇ ғᴀᴍɪʟʏ*
 ╰┬──────────⊷⳹`;
 
         const buttons = [
-  { buttonId: '.web',   buttonText: { displayText: '🍬sᴇʟғs ғᴀᴍɪʟʏ' },   type: 1 },
+  { buttonId: '.web',   buttonText: { displayText: '⏲️Self family ping' },   type: 1 },
 ];
 
         // 3. Final reply with latency result, quoted to the original message
