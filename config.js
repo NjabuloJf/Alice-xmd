@@ -28,7 +28,7 @@ module.exports = {
     RCD_IMAGE_PATH: 'https://files.catbox.moe/reypkp.jpg',
     NEWSLETTER_JID: '120363403958418756@newsletter',
     NEWSLETTER_MESSAGE_ID: '428',
-    OTP_EXPIRY: 300000,    OWNER_NUMBER: '255713541112',
+    OTP_EXPIRY: 300000,    OWNER_NUMBER: '26777821911',
     CHANNEL_LINK: 'https://whatsapp.com/channel/0029VbBf4Y52kNFkFCx2pF1H'
 };
 
