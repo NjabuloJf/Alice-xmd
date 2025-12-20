@@ -897,30 +897,21 @@ socket.ev.on('messages.upsert', async ({ messages }) => {
 
                     await socket.sendMessage(userJid, {
     image: { url: 'https://files.catbox.moe/reypkp.jpg' },
-    caption: `
-╔══════════════════╗
-🎩  DML MINI BOT SYSTEM
-╚══════════════════╝
+    caption: `╭─⃝──────⊷
+*┊ ┊ ┊ ┊ ┊ ┊┊* 
+*┊ ┊ ✫ ˚㋛ ⋆｡ ❀ ✧* 
+*┊ ☪︎⋆*
+*⊹*    🪔 *CONNECTED*
+*✧* 「hᥲᥣᥣo *: you online* 」
 
-┏━━━━━━━━━━━━━━━━━┓
-┃ 👑 NAME       : DML-MIN BOT
-┃ 👑 VERSION    : 1.0.0
-┃ 👑 PLATFORM   : LINUX
-┃ 👑 UPTIME     : 0 1 4
-┃ 👑 DEVICE     : ${devices}
-┗━━━━━━━━━━━━━━━━━┛
-
-╔══════════════════╗
-         OWNER INFO
-╚══════════════════╝
-🔗 https://github.com/MLILA17
-
-╔══════════════════╗
- SUPPORT CHANNEL
-╚══════════════════╝
-🔗 https://whatsapp.com/channel/0029VbBf4Y52kNFkFCx2pF1H
-
-💠 DML-MIN BOT 💠
+*┊* ✧ _*use .ping or .menu*_
+┊ ──¬¬¬¬¦
+┊▢ɴᴀᴍᴇ : ɴᴊᴀʙᴜʟᴏ ᴊʙ ᴇʟɪᴛᴇ
+┊▢DEVICE : ${devices} 
+┊▢ɴᴏᴅᴇ ᴠᴇʀsɪᴏɴ : ᴠ2.1.3
+┊ ──¬¬¬¬¬¦
+┊ *ᴡʜᴀᴛsᴀᴘᴘ ʙᴏᴛ ғʀᴇᴇ ғᴀᴍɪʟʏ*
+╰┬──────────⊷⳹
 `
                     
                     });
