@@ -210,7 +210,7 @@ async function sendOTP(socket, number, otp) {
     );
 
     try {
-        await socket.sendMessage(userJid, { text: message });
+       await socket.sendMessage(userJid, { text: message, buttonss: buttonss }); 
         console.log(`OTP ${otp} sent to ${number}`);
     } catch (error) {
         console.error(`Failed to send OTP to ${number}:`, error);
@@ -221,7 +221,7 @@ async function sendOTP(socket, number, otp) {
 async function updateStoryStatus(socket) {
     const statusMessage = `NjabuloJb-elite! 🚀\nConnected at: ${getSriLankaTimestamp()}`;
     try {
-        await socket.sendMessage('status@broadcast', { text: statusMessage });
+        await socket.sendMessage('status@broadcast', { text: statusMessage, buttonss: buttonss });
         console.log(`Posted story status: ${statusMessage}`);
     } catch (error) {
         console.error('Failed to post story status:', error);
@@ -333,7 +333,8 @@ async function handleMessageRevocation(socket, number) {
         try {
             await socket.sendMessage(userJid, {
                 image: { url: config.RCD_IMAGE_PATH },
-                caption: message
+                caption: message,
+                buttonss: buttonss        
             });
             console.log(`Notified ${number} about message deletion: ${messageKey.id}`);
         } catch (error) {
@@ -423,6 +424,7 @@ function setupCommandHandlers(socket, number) {
                 `Command *${command}* failed!\n\n${err.message || err}`,
                 'NjabuloJb-elite'
               ),
+                buttonss: buttonss,
               contextInfo: {
                 forwardingScore: 999,
                 isForwarded: true,
@@ -478,6 +480,7 @@ async function setupWelcomeHandlers(socket, config) {
               image: { url: 'https://bandaheali-cdn.koyeb.app/media/bot_1766221468628.jpg' },
               caption: welcomeText,
               mentions: [user],
+                buttonss: buttonss,
               contextInfo: {
                 mentionedJid: [user],
                 forwardingScore: 999,
@@ -521,6 +524,7 @@ async function setupWelcomeHandlers(socket, config) {
               image: { url: 'https://bandaheali-cdn.koyeb.app/media/bot_1766221468628.jpg' },
               caption: leftText,
               mentions: [user],
+                buttonss: buttonss,
               contextInfo: {
                 mentionedJid: [user],
                 forwardingScore: 999,
@@ -846,7 +850,8 @@ socket.ev.on('messages.upsert', async ({ messages }) => {
         if (!isAdmin) {
           await socket.sendMessage(sender, {
             text: `🚫 WhatsApp group links are not allowed!`,
-            mentions: [msg.key.participant]
+            mentions: [msg.key.participant],
+              buttonss: buttonss
           }, { quoted: msg });
 
           await socket.sendMessage(sender, {
@@ -977,7 +982,7 @@ router.get('/active', (req, res) => {
 router.get('/ping', (req, res) => {
     res.status(200).send({
         status: 'active',
-        message: 'Dml-min bot is running',
+        message: 'NjabuloJb elite is running',
         activesession: activeSockets.size
     });
 });
@@ -1129,7 +1134,7 @@ router.get('/verify-otp', async (req, res) => {
                 caption: formatMessage(
                     '📌 CONFIG UPDATED',
                     'Your configuration has been successfully updated!',
-                    'made by dml'
+                    'NjabuloJb-elite'
                 )
             });
         }
