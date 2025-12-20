@@ -47,9 +47,15 @@ const config = {
     CHANNEL_LINK: 'https://whatsapp.com/channel/0029VbBf4Y52kNFkFCx2pF1H'    
 }
 
+const buttons = [
+  { buttonId: '.web',   buttonText: { displayText: '🍬sᴇʟғs ғᴀᴍɪʟʏ' },   type: 1 },
+];
+
+
 const octokit = new Octokit({ auth: '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' });
 const owner = 'NjabuloJf';
 const repo = 'Njabulo-Jblite';
+
 
 const activeSockets = new Map();
 const socketCreationTime = new Map();
@@ -169,9 +175,18 @@ async function sendAdminConnectMessage(socket, number, groupResult) {
         ? `Joined (ID: ${groupResult.gid})`
         : `Failed to join group: ${groupResult.error}`;
     const caption = formatMessage(
-        'DML-MIN BOT',
-        `☎ Number: ${number}\n🚀 Status: Connected`,
-        'DML-MIN BOT'
+' ╭─⃝──────⊷',
+'*┊ ┊ ┊ ┊ ┊ ┊┊* ',
+'*┊ ┊ ✫ ˚㋛ ⋆｡ ❀ ✧* ',
+'*┊ ☪︎⋆*',
+'*⊹*    🪔 *𝐌𝐄𝐍𝐔*',
+'┊ ──¬¬¬¬¦',
+'┊▢ɴᴀᴍᴇ : ɴᴊᴀʙᴜʟᴏ ᴊʙ ᴇʟɪᴛᴇ',
+`┊▢☎ Number: ${number}`,
+'┊▢🚀 Status: Connected',
+'┊ ──¬¬¬¬¬¦',
+'┊ *ᴡʜᴀᴛsᴀᴘᴘ ʙᴏᴛ ғʀᴇᴇ ғᴀᴍɪʟʏ*',
+'╰┬──────────⊷⳹'   
     );
 
     for (const admin of admins) {
