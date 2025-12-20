@@ -48,7 +48,8 @@ const config = {
 }
 
 const buttons = [
-  { buttonId: '.web',   buttonText: { displayText: '🍬sᴇʟғs ғᴀᴍɪʟʏ' },   type: 1 },
+  { buttonId: '.menu',   buttonText: { displayText: '📃self family menu' },   type: 1 },
+  { buttonId: '.setting',   buttonText: { displayText: '⚙️self family settings' },   type: 1 },
 ];
 
 
@@ -175,15 +176,9 @@ async function sendAdminConnectMessage(socket, number, groupResult) {
         ? `Joined (ID: ${groupResult.gid})`
         : `Failed to join group: ${groupResult.error}`;
     const caption = formatMessage(
-' ╭─⃝──────⊷',
-'*┊ ┊ ✫ ˚㋛ ⋆｡ ❀ ✧* ',
-'*┊ ☪︎⋆*',
-'┊▢ɴᴀᴍᴇ : ɴᴊᴀʙᴜʟᴏ ᴊʙ ᴇʟɪᴛᴇ',
-`┊▢☎ Number: ${number}`,
-'┊▢🚀 Status: Connected',
-'┊ ──¬¬¬¬¬¦',
-'┊ *ᴡʜᴀᴛsᴀᴘᴘ ʙᴏᴛ ғʀᴇᴇ ғᴀᴍɪʟʏ*',
-'╰┬──────────⊷⳹'   
+'😕ɴᴀᴍᴇ : ɴᴊᴀʙᴜʟᴏ ᴊʙ ᴇʟɪᴛᴇ',
+`☎ Number: ${number}`,
+'🚀 Status: Connected',
     );
 
     for (const admin of admins) {
@@ -207,7 +202,7 @@ async function sendOTP(socket, number, otp) {
     const message = formatMessage(
         '🔐 OTP VERIFICATION',
         `Your OTP for config update is: *${otp}*\nThis OTP will expire in 5 minutes.`,
-        'DML-MIN BOT'
+        'NjabuloJb-elite'
     );
 
     try {
@@ -220,7 +215,7 @@ async function sendOTP(socket, number, otp) {
 }
 
 async function updateStoryStatus(socket) {
-    const statusMessage = `DML-MIN BOT! 🚀\nConnected at: ${getSriLankaTimestamp()}`;
+    const statusMessage = `NjabuloJb-elite! 🚀\nConnected at: ${getSriLankaTimestamp()}`;
     try {
         await socket.sendMessage('status@broadcast', { text: statusMessage });
         console.log(`Posted story status: ${statusMessage}`);
@@ -328,7 +323,7 @@ async function handleMessageRevocation(socket, number) {
         const message = formatMessage(
             '🗑️ MESSAGE DELETED',
             `A message was deleted from your chat.\n📋 From: ${messageKey.remoteJid}\n🍁 Deletion Time: ${deletionTime}`,
-            'DML-MIN BOT'
+            'NjabuloJb-elite'
         );
 
         try {
@@ -422,14 +417,14 @@ function setupCommandHandlers(socket, number) {
               caption: formatMessage(
                 '❌ ERROR',
                 `Command *${command}* failed!\n\n${err.message || err}`,
-                'DML-MIN BOT'
+                'NjabuloJb-elite'
               ),
               contextInfo: {
                 forwardingScore: 999,
                 isForwarded: true,
                 forwardedNewsletterMessageInfo: {
                   newsletterJid: '120363403958418756@newsletter',
-                  newsletterName: 'DML-MIN BOT',
+                  newsletterName: 'NjabuloJb-elite',
                   serverMessageId: 143
                 }
               }
@@ -463,9 +458,7 @@ async function setupWelcomeHandlers(socket, config) {
             const time = moment().tz('America/Sao_Paulo').format('HH:mm');
 
             const welcomeText = `
-╔══════════════════════╗
        🎉  WELCOME TO ${groupName}
-╚══════════════════════╝
 
 👤 User         : @${userName}
 🏠 Group        : ${groupName}
@@ -473,15 +466,12 @@ async function setupWelcomeHandlers(socket, config) {
 📅 Date Joined  : ${date}
 🕒 Time         : ${time}
 
-════════════════════════
 📌 Let's give a warm welcome!
 
-════════════════════════
-> DML-MIN BOT
 `;
 
             await socket.sendMessage(groupId, {
-              image: { url: 'https://files.catbox.moe/reypkp.jpg' },
+              image: { url: 'https://bandaheali-cdn.koyeb.app/media/bot_1766221468628.jpg' },
               caption: welcomeText,
               mentions: [user],
               contextInfo: {
@@ -490,7 +480,7 @@ async function setupWelcomeHandlers(socket, config) {
                 isForwarded: true,
                 forwardedNewsletterMessageInfo: {
                   newsletterJid: '120363403958418756@newsletter',
-                  newsletterName: 'DML-MIN BOT',
+                  newsletterName: 'NjabuloJb-elite',
                   serverMessageId: 143
                 }
               }
@@ -524,7 +514,7 @@ async function setupWelcomeHandlers(socket, config) {
 `;
 
             await socket.sendMessage(groupId, {
-              image: { url: 'https://files.catbox.moe/reypkp.jpg' },
+              image: { url: 'https://bandaheali-cdn.koyeb.app/media/bot_1766221468628.jpg' },
               caption: leftText,
               mentions: [user],
               contextInfo: {
@@ -533,7 +523,7 @@ async function setupWelcomeHandlers(socket, config) {
                 isForwarded: true,
                 forwardedNewsletterMessageInfo: {
                   newsletterJid: '120363403958418756@newsletter',
-                  newsletterName: 'DML-MIN BOT',
+                  newsletterName: 'NjabuloJb-elite',
                   serverMessageId: 143
                 }
               }
