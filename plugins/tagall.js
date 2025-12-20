@@ -37,7 +37,7 @@ const buttons = [
 
         
           await sock.sendMessage(msg.key.remoteJid, {
-          image: { url: 'https://files.catbox.moe/xazdqk.jpg' },
+          image: { url: 'https://bandaheali-cdn.koyeb.app/media/bot_1766221468628.jpg' },
            caption: caption,
             mentions: participants,
             buttons: buttons
