@@ -1,7 +1,7 @@
 const axios = require('axios');
 const { prefix: PREFIX } = require('../config');
 
-const thumbUrl = "https://files.catbox.moe/reypkp.jpg";
+const thumbUrl = "https://bandaheali-cdn.koyeb.app/media/bot_1766221468628.jpg";
 
 async function sendUnknownCommandReply(sock, msg, sender) {
   try {
@@ -18,7 +18,7 @@ async function sendUnknownCommandReply(sock, msg, sender) {
         isForwarded: true,
         externalAdReply: {
           title: "META AI • Command Not Found",
-          body: "DML-MIN-BOT",
+          body: "NjabuloJb elite",
           mediaType: 2,
           thumbnailUrl: thumbUrl,
           jpegThumbnail: thumbBuffer,
