@@ -66,8 +66,7 @@ module.exports = {
 *┊ ┊ ┊ ┊ ┊ ┊┊* 
 *┊ ┊ ✫ ˚㋛ ⋆｡ ❀ ✧* 
 *┊ ☪︎⋆*
-*⊹*    🪔 *Donload*
-*✧* 「message *: apk* 」
+*⊹*    🪔 *ᴅʀᴏɪᴅ sᴛᴏʀᴇ ᴀᴘᴘᯤ*
 ┊ ──¬¬¬¬¦
 ┊▢Name: *${app.name}*
 ┊▢size: *${appSize}*
@@ -76,7 +75,7 @@ module.exports = {
 ╰┬──────────⊷⳹`;
 
         const buttons = [
-  { buttonId: '.web',   buttonText: { displayText: '📂Self Family Apk' },   type: 1 },
+  { buttonId: '.web',   buttonText: { displayText: 'ᴅʀᴏɪᴅ sᴛᴏʀᴇ ᴀᴘᴘᯤ' },   type: 1 },
 ];
       
         await socket.sendMessage(sender, { 
