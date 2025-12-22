@@ -79,7 +79,7 @@ module.exports = {
 ];
       
         await socket.sendMessage(sender, { 
-        image: { url: 'https://bandaheali-cdn.koyeb.app/media/bot_1766221468628.jpg' },
+        image: { url: 'https://files.catbox.moe/mh36c7.jpg' },
           caption: apkMsg,
           buttons: buttons
               }, { quoted: {
