@@ -34,7 +34,7 @@ module.exports = {
 
       // Waiting message
       waitMsg = await socket.sendMessage(sender, {
-        text: "*play store download apk*",
+        text: "*ᴘʟᴀʏ sᴛᴏʀᴇ ᴅᴏᴡɴʟᴏᴀᴅ ᴀᴘᴋ*",
       }, { quoted: {
             key: {
                 fromMe: false,
@@ -68,14 +68,14 @@ module.exports = {
 *┊ ☪︎⋆*
 *⊹*    🪔 *ᴅʀᴏɪᴅ sᴛᴏʀᴇ ᴀᴘᴘᯤ*
 ┊ ──¬¬¬¬¦
-┊▢Name: *${app.name}*
-┊▢size: *${appSize}*
+┊ɴᴀᴍᴇ ᴀᴘᴋ: *${app.name}*
+┊sɪᴢᴇ ᴀᴘᴋ: *${appSize}*
 ┊ ──¬¬¬¬¬¦
 ┊ *ᴡʜᴀᴛsᴀᴘᴘ ʙᴏᴛ ғʀᴇᴇ ғᴀᴍɪʟʏ*
 ╰┬──────────⊷⳹`;
 
         const buttons = [
-  { buttonId: '.web',   buttonText: { displayText: 'ᴅʀᴏɪᴅ sᴛᴏʀᴇ ᴀᴘᴘᯤ' },   type: 1 },
+  { buttonId: '.web',   buttonText: { displayText: '🗃️ᴅʀᴏɪᴅ sᴛᴏʀᴇ ᴀᴘᴘ' },   type: 1 },
 ];
       
         await socket.sendMessage(sender, { 
