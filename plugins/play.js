@@ -47,15 +47,15 @@ Example:
       }
 
       // 📦 Song info box
-      const caption = `*🎧 Title* : ${meta.title}
-*📺 Channel* : ${meta.channel}
+      const caption = `*🎧ᴛɪᴛʟᴇ* : ${meta.title}
+*📺ᴄʜᴀɴɴᴇʟ* : ${meta.channel}
 
 *⇆ㅤ ||◁ㅤ❚❚ㅤ▷||ㅤ ↻*
 *0:00 ──〇───────: ${meta.duration}* `;
 
       const buttons = [
-  { buttonId: '.web',   buttonText: { displayText: '🎧Get Audio' },   type: 1 },
-  { buttonId: '.web',   buttonText: { displayText: '🗃️Get Document' },   type: 1 }
+  { buttonId: '.web',   buttonText: { displayText: '🎧ɢᴇᴛ ғɪʟᴇ ᴍᴜsɪᴄ' },   type: 1 },
+  { buttonId: '.web',   buttonText: { displayText: '🗃️ɢᴇᴛ ᴀᴜᴅɪᴏ ᴘʟᴀʏ' },   type: 1 }
 ];
 
       // 🖼️ Send thumbnail or info text
