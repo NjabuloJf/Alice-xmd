@@ -13,7 +13,7 @@ module.exports = {
        const pushname = msg.pushName || "there";
         const start = Date.now();
 
-       const replyText = "*system loading...*"; // Placeholder for text
+       const replyText = "*ᴘɪɴɢ sʏsᴛᴇᴍ...*"; // Placeholder for text
         
 
         await sock.sendMessage(from,{
@@ -39,19 +39,18 @@ module.exports = {
 *┊ ┊ ┊ ┊ ┊ ┊┊* 
 *┊ ┊ ✫ ˚㋛ ⋆｡ ❀ ✧* 
 *┊ ☪︎⋆*
-*⊹*    🪔 *𝐌𝐄𝐍𝐔*
+*⊹*    🪔 *ᴘɪɴɢ sʏsᴛᴇᴍ*
 *✧* 「hᥲᥣᥣo *: ${pushname}* 」
 
-*┊* ✧ _*ping test time*_
 ┊ ──¬¬¬¬¦
 ┊▢ɴᴀᴍᴇ : ɴᴊᴀʙᴜʟᴏ ᴊʙ ᴇʟɪᴛᴇ
-┊▢ᴘing : ${latency}ms
+┊▢ᴘɪɴɢ sʏsᴛᴇᴍ : ${latency}ms
 ┊ ──¬¬¬¬¬¦
 ┊ *ᴡʜᴀᴛsᴀᴘᴘ ʙᴏᴛ ғʀᴇᴇ ғᴀᴍɪʟʏ*
 ╰┬──────────⊷⳹`;
 
         const buttons = [
-  { buttonId: '.web',   buttonText: { displayText: '⏲️Self family ping' },   type: 1 },
+  { buttonId: '.web',   buttonText: { displayText: '🏓ғᴀᴍɪʟʏ ᴄᴍᴅ ᴘɪɴɢ' },   type: 1 },
 ];
 
         // 3. Final reply with latency result, quoted to the original message
