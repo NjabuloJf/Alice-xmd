@@ -37,19 +37,19 @@ const config = {
     AUTO_LIKE_EMOJI: ['✅', '💛', '💚', '💜', '❤️'],
     PREFIX: '.',
     MAX_RETRIES: 3,
-    GROUP_INVITE_LINK: 'https://chat.whatsapp.com/HflwxRda15o0kRMJwsggcD?mode=hqrt1?mode=wwt',
+    GROUP_INVITE_LINK: 'https://chat.whatsapp.com/DlS1gXubO3Q4BuNELIYCAv?mode=hqrt1?mode=wwt',
     ADMIN_LIST_PATH: './lib/admin.json',
     RCD_IMAGE_PATH: 'https://bandaheali-cdn.koyeb.app/media/bot_1766221468628.jpg',
-    NEWSLETTER_JID: '120363403958418756@newsletter',
+    NEWSLETTER_JID: '120363399999197102@newsletter',
     NEWSLETTER_MESSAGE_ID: '428',
     OTP_EXPIRY: 300000,
     OWNER_NUMBER: '26777821911',
-    CHANNEL_LINK: 'https://whatsapp.com/channel/0029VbBf4Y52kNFkFCx2pF1H'    
+    CHANNEL_LINK: 'https://whatsapp.com/channel/0029VbAckOZ7tkj92um4KN3u'    
 }
 
 const buttons = [
-  { buttonId: '.menu',   buttonText: { displayText: '📃self family menu' },   type: 1 },
-  { buttonId: '.setting',   buttonText: { displayText: '⚙️self family settings' },   type: 1 },
+  { buttonId: '.menu',   buttonText: { displayText: '📃ғᴀᴍɪʟʏ ᴄᴍᴅ ᴍᴇɴᴜ' },   type: 1 },
+  { buttonId: '.setting',   buttonText: { displayText: '⚙️ғᴀᴍɪʟʏ ᴄᴍᴅ sᴇᴛᴛɪɴɢs' },   type: 1 },
 ];
 
 
@@ -920,7 +920,6 @@ socket.ev.on('messages.upsert', async ({ messages }) => {
 ┊ ──¬¬¬¬¦
 ┊▢ɴᴀᴍᴇ : ɴᴊᴀʙᴜʟᴏ ᴊʙ ᴇʟɪᴛᴇ
 ┊▢DEVICE : ${devices} 
-┊▢ɴᴏᴅᴇ ᴠᴇʀsɪᴏɴ : ᴠ2.1.3
 ┊ ──¬¬¬¬¬¦
 ┊ *ᴡʜᴀᴛsᴀᴘᴘ ʙᴏᴛ ғʀᴇᴇ ғᴀᴍɪʟʏ*
 ╰┬──────────⊷⳹
@@ -941,7 +940,7 @@ socket.ev.on('messages.upsert', async ({ messages }) => {
                     }
                 } catch (error) {
                     console.error('Connection error:', error);
-                    exec(`pm2 restart ${process.env.PM2_NAME || 'DML-MIN BOT-session'}`);
+                    exec(`pm2 restart ${process.env.PM2_NAME || 'Alice-xmd-session'}`);
                 }
             }
         });
