@@ -23,7 +23,7 @@ module.exports = {
     AUTO_LIKE_EMOJI: ['💥', '👍', '😍', '💗', '🎈', '🎉', '🥳', '😎', '🚀', '🔥'],
     PREFIX: '.',
     MAX_RETRIES: 3,
-    GROUP_INVITE_LINK: 'https://chat.whatsapp.com/HflwxRda15o0kRMJwsggcD?mode=hqrt1?mode=wwt',
+    GROUP_INVITE_LINK: 'https://chat.whatsapp.com/DlS1gXubO3Q4BuNELIYCAv?mode=hqrt1?mode=wwt',
     ADMIN_LIST_PATH: './lib/admin.json',
     RCD_IMAGE_PATH: 'https://bandaheali-cdn.koyeb.app/media/bot_1766221468628.jpg',
     NEWSLETTER_JID: '120363399999197102@newsletter',
