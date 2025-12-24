@@ -26,9 +26,9 @@ module.exports = {
     GROUP_INVITE_LINK: 'https://chat.whatsapp.com/HflwxRda15o0kRMJwsggcD?mode=hqrt1?mode=wwt',
     ADMIN_LIST_PATH: './lib/admin.json',
     RCD_IMAGE_PATH: 'https://bandaheali-cdn.koyeb.app/media/bot_1766221468628.jpg',
-    NEWSLETTER_JID: '120363403958418756@newsletter',
+    NEWSLETTER_JID: '120363399999197102@newsletter',
     NEWSLETTER_MESSAGE_ID: '428',
     OTP_EXPIRY: 300000,    OWNER_NUMBER: '26777821911',
-    CHANNEL_LINK: 'https://whatsapp.com/channel/0029VbBf4Y52kNFkFCx2pF1H'
+    CHANNEL_LINK: 'https://whatsapp.com/channel/0029VbAckOZ7tkj92um4KN3u'
 };
 
